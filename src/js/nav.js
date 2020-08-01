@@ -1,5 +1,5 @@
 const nav = (() => {
-const nav = document.createElement('nav');
+const navElement = document.createElement('nav');
 const navItems = document.createElement('ul');
 navItems.classList.add('nav-items');
 navItems.innerHTML = `
@@ -11,5 +11,8 @@ navItems.innerHTML = `
             <span class="slider round"></span>
 </li>
 `
-nav.appendChild(navItems);
+navElement.appendChild(navItems);
+return navElement
 })();
+
+export default nav;
