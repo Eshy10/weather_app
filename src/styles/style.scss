@@ -1,14 +1,12 @@
-/* Import Google Font */
 @import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
 
-/* RESET */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* STYLING */
 body {
     height: 100vh;
     background-color: #f4f4f4;
@@ -21,7 +19,7 @@ body {
     color: #8a8a8a;
 }
 
-.nav {
+.nav-items {
     height: 100px;
     box-shadow: 10px 10px 12px 0 rgba(0, 0, 0, 0.07);
     border-radius: 0 0 10px 10px;
@@ -31,7 +29,7 @@ body {
     padding: 0 3rem;
     list-style-type: none;
   }
-  .nav li.logo {
+  .nav-items li.logo {
     margin-right: auto;
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
@@ -47,7 +45,7 @@ body {
     cursor: pointer;
     font-size: 0.85em;
 }
-/* the box around the slider */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -55,13 +53,13 @@ body {
     height: 22px;
     margin-left: 4px;
 }
-/* Hide default HTML checkbox */
+
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-/* The slider */
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -95,16 +93,12 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(21px);
 }
-/* Rounded sliders */
 .slider.round {
     border-radius: 11px;
 }
 .slider.round:before {
     border-radius: 50%;
 }
-
-
-/*  FORM  */
 
 .form {
     margin-top: 8rem;
@@ -126,8 +120,6 @@ input:checked + .slider:before {
     box-shadow: 0.3rem 0.3rem 0.6rem lightgrey, -0.2rem -0.2rem 0.5rem white;
   }
 
-  
-/*  BUTTONS  */
 .button {
     cursor: pointer;
     text-align: center;
@@ -150,14 +142,12 @@ input:checked + .slider:before {
     box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff;
   }
 
-/* Style the tab content */
 .tabcontent {
     padding: 10px;
     min-height: 288px;
     width: 30%;
     margin: 0 auto;
     margin-top: 3rem;
-    /* display: none;     */
     border-radius: 18px;
     background: #f4f4f4;
     box-shadow:  3px 3px 6px #bebebe, 
