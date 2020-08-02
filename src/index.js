@@ -2,6 +2,8 @@ import './styles/style.scss';
 import nav from './js/nav';
 import form from './js/form';
 import content from './js/content';
+import { changeTemp } from './js/weather';
+
 const Skycons = require("skycons")(window);
 
 const container = document.querySelector('#container');
@@ -11,7 +13,7 @@ container.appendChild(content);
 
 const key = "3c8e19a35c7b3df5adebf12517690280";
 
-const weather = {};
+export const weather = {};
 
 weather.temperature = {
     unit : "celsius"
@@ -61,7 +63,7 @@ const displayWeather = (data) => {
     <h5 class="description">${weather.description}</h5>
     <p class="city">${weather.city}, ${weather.country}</p>
     `
-    // changeTemp()
+    changeTemp();
     if(data.weather[0].main === 'Clouds') {    
             icon.set("icon", 'cloudy');  
             icon.play()
