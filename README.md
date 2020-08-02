@@ -1,6 +1,6 @@
 # weather_app
 
-> Weather App with a dark mode feature, design inspired by neumorphism..
+> Weather App with a dark mode feature, design inspired by neumorphism...
 
 ![screencapture-localhost-8080-2020-08-02-01_42_43](https://user-images.githubusercontent.com/52670459/89113012-3ab4ce00-d463-11ea-8455-c3ee6cc4ce2e.png)
 
