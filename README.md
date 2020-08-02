@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-[Live Demo Link]( https://sharp-mahavira-246fb5.netlify.app)
+[Live Demo Link](  https://sharp-mahavira-246fb5.netlify.app)
 
 
 ## Usage
