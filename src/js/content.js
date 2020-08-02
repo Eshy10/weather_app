@@ -8,9 +8,12 @@ const content = (() => {
   canvasElement.setAttribute('width', '100');
   canvasElement.setAttribute('height', '100');
   iconElement.appendChild(canvasElement);
+  const loaderElement = document.createElement('div');
+  loaderElement.classList.add('loader');
   const weatherInfo = document.createElement('div');
   weatherInfo.classList.add('weather-info');
   contentElement.appendChild(iconElement);
+  contentElement.appendChild(loaderElement);
   contentElement.appendChild(weatherInfo);
   return contentElement;
 })();

@@ -23,6 +23,7 @@ const darkModeSwitch = document.querySelector('#dark-mode-switch');
 const input = document.querySelector('.form__input');
 const formElement = document.querySelector('.form');
 const weatherContainer = document.querySelector('.weather-info');
+const loader = document.querySelector('.loader');
 const icon = new Skycons({ color: '#21268b' });
 icon.set('icon', 'clear_day');
 icon.play();
@@ -80,7 +81,11 @@ const displayWeather = (data) => {
 async function getWeather(api) {
   try {
     const response = await fetch(api);
+    if (response === 404) {
+      loader.style.display = 'none';
+    }
     const result = await response.json();
+    loader.style.display = 'none';
     const data = result;
     weather.temperature.value = Math.floor(data.main.temp);
     weather.description = data.weather[0].description;
@@ -100,9 +105,11 @@ formElement.addEventListener('submit', (e) => {
   const { value } = input;
   if (!value) return;
   const api = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${key}&units=metric`;
+  loader.style.display = 'block';
   getWeather(api);
   formElement.reset();
   weatherContainer.innerHTML = '';
+  weatherContainer.style.display = 'none';
 });
 
 const darkmode = JSON.parse(localStorage.getItem('jstabs-darkmode'));
