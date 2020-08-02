@@ -2,6 +2,7 @@ const content = (() => {
 const contentElement = document.createElement('div');
 contentElement.classList.add('tabcontent');
 const iconElement = document.createElement('div');
+iconElement.classList.add('icon');
 const canvasElement = document.createElement('canvas');
 canvasElement.setAttribute('id', 'icon');
 canvasElement.setAttribute('width', '100');

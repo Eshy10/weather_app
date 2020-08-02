@@ -37,6 +37,7 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
-    "clean-webpack-plugin": "^3.0.0"
+    "clean-webpack-plugin": "^3.0.0",
+    "skycons": "^1.0.0"
   }
 }
