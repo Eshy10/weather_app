@@ -2,10 +2,10 @@
 
 > Weather App with a dark mode feature, design inspired by neumorphism...
 
-![screencapture-localhost-8080-2020-08-02-01_42_43](https://user-images.githubusercontent.com/52670459/89113012-3ab4ce00-d463-11ea-8455-c3ee6cc4ce2e.png)
+![screencapture-5f282275ff928dbb6bcb9225-sharp-mahavira-246fb5-netlify-app-2020-08-03-15_45_50](https://user-images.githubusercontent.com/52670459/89195395-9e90e100-d5a0-11ea-9841-3ff70d9e3b02.png)
 
 # Dark Mode
-![screencapture-localhost-8080-2020-08-02-01_42_24](https://user-images.githubusercontent.com/52670459/89113022-515b2500-d463-11ea-99c1-803b52a4db07.png)
+![screencapture-5f282275ff928dbb6bcb9225-sharp-mahavira-246fb5-netlify-app-2020-08-03-15_45_20](https://user-images.githubusercontent.com/52670459/89195464-b5cfce80-d5a0-11ea-98bd-f68ed941bf99.png)
 
 
 ## Built With

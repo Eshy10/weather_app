@@ -23,10 +23,9 @@ const darkModeSwitch = document.querySelector('#dark-mode-switch');
 const input = document.querySelector('.form__input');
 const formElement = document.querySelector('.form');
 const weatherContainer = document.querySelector('.weather-info');
+const iconContainer = document.querySelector('.icon');
 const loader = document.querySelector('.loader');
 const icon = new Skycons({ color: '#21268b' });
-icon.set('icon', 'clear_day');
-icon.play();
 
 const celsiusToFahrenheit = (temperature) => temperature * (9 / 5) + 32;
 
@@ -51,6 +50,7 @@ const changeTemp = () => {
 
 const displayWeather = (data) => {
   weatherContainer.style.display = 'block';
+  iconContainer.style.display = 'block';
   weatherContainer.innerHTML = `
         <h3 class="temperature">${weather.temperature.value}<span>°C</span></h3>
         <h5 class="description">${weather.description}</h5>
@@ -99,6 +99,7 @@ async function getWeather(value) {
     displayWeather(data);
   } catch (error) {
     weatherContainer.style.display = 'block';
+    iconContainer.style.display = 'none';
     weatherContainer.innerHTML = 'Please enter a valid city 🙄';
   }
 }
