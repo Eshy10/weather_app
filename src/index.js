@@ -82,9 +82,9 @@ const displayWeather = (data) => {
   }
 };
 
-async function getWeather(api) {
+async function getWeather(value) {
   try {
-    const response = await fetch(api);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${key}&units=metric`);
     if (response === 404) {
       loader.style.display = 'none';
     }
@@ -102,15 +102,14 @@ async function getWeather(api) {
     weatherContainer.innerHTML = 'Please enter a valid city 🙄';
   }
 }
-
+getWeather('lagos');
 
 formElement.addEventListener('submit', (e) => {
   e.preventDefault();
   const { value } = input;
   if (!value) return;
-  const api = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${key}&units=metric`;
   loader.style.display = 'block';
-  getWeather(api);
+  getWeather(value);
   formElement.reset();
   weatherContainer.innerHTML = '';
   weatherContainer.style.display = 'none';
