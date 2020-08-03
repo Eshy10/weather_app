@@ -31,17 +31,20 @@ icon.play();
 const celsiusToFahrenheit = (temperature) => temperature * (9 / 5) + 32;
 
 const changeTemp = () => {
+  const covertButton = document.querySelector('.convert');
   const tempElement = document.querySelector('.temperature');
-  tempElement.addEventListener('click', () => {
+  covertButton.addEventListener('click', () => {
     if (weather.temperature.unit === 'celsius') {
       let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
       fahrenheit = Math.floor(fahrenheit);
 
       tempElement.innerHTML = `${fahrenheit}°<span>F</span>`;
       weather.temperature.unit = 'fahrenheit';
+      covertButton.textContent = 'To Celsius';
     } else {
       tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
       weather.temperature.unit = 'celsius';
+      covertButton.textContent = 'To Fahrenheit';
     }
   });
 };
@@ -49,9 +52,10 @@ const changeTemp = () => {
 const displayWeather = (data) => {
   weatherContainer.style.display = 'block';
   weatherContainer.innerHTML = `
-        <h3 class="temperature">${weather.temperature.value}<span>C</span></h3>
+        <h3 class="temperature">${weather.temperature.value}<span>°C</span></h3>
         <h5 class="description">${weather.description}</h5>
         <p class="city">${weather.city}, ${weather.country}</p>
+        <button class= 'convert'>To Fahrenheit</button>
         `;
   changeTemp();
   if (data.weather[0].main === 'Clouds') {
